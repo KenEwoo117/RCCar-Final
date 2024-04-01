@@ -7,21 +7,22 @@ import java.math.BigDecimal;
 public abstract class AbstractRc implements forSale {
 
 
-private String modelNumber;
+private String serialNumber;
 
 
 public abstract BigDecimal getSaleValue();
 public abstract String getUPC();
 public abstract String getWheelType();
 public abstract int getStartingNumber();
+public abstract String getModelNumber();
 
 
 
-public void setModelNumber(String modelNumber) {
-    this.modelNumber = modelNumber;
+public void setSerialNumber(String serialNumber) {
+    this.serialNumber = serialNumber;
 }
 
-public String getModelNumber() {return modelNumber;}
+public String getSerialNumber() {return serialNumber;}
 
 public BigDecimal getOptionalAmount() {
     return BigDecimal.valueOf(0.0);

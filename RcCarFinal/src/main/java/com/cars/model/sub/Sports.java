@@ -1,10 +1,10 @@
 package com.cars.model.sub;
 
-import com.cars.model.base.AbstractOnRoad;
+import com.cars.model.base.AbstractStreet;
 
 import java.math.BigDecimal;
 
-public class Sports extends AbstractOnRoad {
+public class Sports extends AbstractStreet {
 
     public Sports() {
 
@@ -23,6 +23,11 @@ public class Sports extends AbstractOnRoad {
     @Override
     public int getStartingNumber() {
         return 9753;
+    }
+
+    @Override
+    public String getModelNumber() {
+        return "SPT2019";
     }
 
     @Override

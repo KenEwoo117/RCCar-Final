@@ -1,11 +1,10 @@
 package com.cars.model.sub;
 
-import com.cars.model.base.AbstractOffRoad;
-import com.cars.model.base.AbstractOnRoad;
+import com.cars.model.base.AbstractStreet;
 
 import java.math.BigDecimal;
 
-public class SUV extends AbstractOnRoad {
+public class SUV extends AbstractStreet {
 
     public SUV() {
 
@@ -24,6 +23,11 @@ public class SUV extends AbstractOnRoad {
     @Override
     public int getStartingNumber() {
         return 8647;
+    }
+
+    @Override
+    public String getModelNumber() {
+        return "642852";
     }
 
     @Override

@@ -1,10 +1,10 @@
 package com.cars.model.sub;
 
-import com.cars.model.base.AbstractOnRoad;
+import com.cars.model.base.AbstractStreet;
 
 import java.math.BigDecimal;
 
-public class Classic extends AbstractOnRoad {
+public class Classic extends AbstractStreet {
 
     public Classic() {
 
@@ -23,6 +23,11 @@ public class Classic extends AbstractOnRoad {
     @Override
     public int getStartingNumber() {
         return 7326;
+    }
+
+    @Override
+    public String getModelNumber() {
+        return "CLS4019";
     }
 
     @Override

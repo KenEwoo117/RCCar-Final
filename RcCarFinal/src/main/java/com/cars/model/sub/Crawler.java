@@ -26,6 +26,11 @@ public class Crawler extends AbstractOffRoad {
     }
 
     @Override
+    public String getModelNumber() {
+        return "ORCR4600";
+    }
+
+    @Override
     public String toString() {
         return "Crawler";
     }

@@ -26,6 +26,11 @@ public class ATV extends AbstractOffRoad {
     }
 
     @Override
+    public String getModelNumber() {
+        return "ORAT2400";
+    }
+
+    @Override
     public String toString() {
         return "ATV";
     }

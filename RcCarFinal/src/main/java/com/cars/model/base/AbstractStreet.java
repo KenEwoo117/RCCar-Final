@@ -1,6 +1,6 @@
 package com.cars.model.base;
 
-public abstract class AbstractOnRoad extends AbstractRc {
+public abstract class AbstractStreet extends AbstractRc {
 
     @Override
     public String getWheelType() {

@@ -26,6 +26,11 @@ public class DuneBuggy extends AbstractOffRoad{
     }
 
     @Override
+    public String getModelNumber() {
+        return "ORDB3400";
+    }
+
+    @Override
     public String toString() {
         return "DuneBuggy";
     }
