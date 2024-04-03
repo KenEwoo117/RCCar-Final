@@ -1,13 +1,13 @@
-package com.cars.model.sub;
+package com.rc.cars.model.sub;
 
-import com.cars.model.base.AbstractRc;
-import com.cars.model.base.AbstractRcUpgrades;
+import com.rc.cars.model.base.AbstractRCCar;
+import com.rc.cars.model.base.AbstractRCUpgrades;
 
 import java.math.BigDecimal;
 
-public class KnobbyTiresUpgrade extends AbstractRcUpgrades {
+public class KnobbyTireOption extends AbstractRCUpgrades {
 
-    public KnobbyTiresUpgrade(AbstractRc car) {
+    public KnobbyTireOption(AbstractRCCar car) {
         super(car);
     }
 

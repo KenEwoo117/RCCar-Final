@@ -1,4 +1,4 @@
-package com.cars.controller;
+package com.rc.cars.controller;
 
 
 public class SerialNumberGenerator {

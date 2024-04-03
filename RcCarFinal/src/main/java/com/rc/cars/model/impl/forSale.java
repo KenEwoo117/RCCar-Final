@@ -1,4 +1,4 @@
-package com.cars.model.impl;
+package com.rc.cars.model.impl;
 
 import java.math.BigDecimal;
 

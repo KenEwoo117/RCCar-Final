@@ -1,12 +1,12 @@
-package com.cars.model.base;
+package com.rc.cars.model.base;
 
 import java.math.BigDecimal;
 
-public abstract class AbstractRcUpgrades extends AbstractRc{
+public abstract class AbstractRCUpgrades extends AbstractRCCar {
 
-    protected AbstractRc upgradedCar;
+    protected AbstractRCCar upgradedCar;
 
-    public AbstractRcUpgrades(AbstractRc car) {
+    public AbstractRCUpgrades(AbstractRCCar car) {
         upgradedCar = car;
     }
 

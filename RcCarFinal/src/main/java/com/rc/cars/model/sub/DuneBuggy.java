@@ -1,37 +1,37 @@
-package com.cars.model.sub;
+package com.rc.cars.model.sub;
 
-import com.cars.model.base.AbstractStreet;
+import com.rc.cars.model.base.AbstractOffRoad;
 
 import java.math.BigDecimal;
 
-public class SUV extends AbstractStreet {
+public class DuneBuggy extends AbstractOffRoad {
 
-    public SUV() {
+    public DuneBuggy() {
 
     }
 
     @Override
     public BigDecimal getSaleValue() {
-        return BigDecimal.valueOf(210.99);
+        return BigDecimal.valueOf(200.99);
     }
 
     @Override
     public String getUPC() {
-        return "642852";
+        return "885532";
     }
 
     @Override
     public int getStartingNumber() {
-        return 8647;
+        return 7446;
     }
 
     @Override
     public String getModelNumber() {
-        return "642852";
+        return "ORDB3400";
     }
 
     @Override
     public String toString() {
-        return "SUV";
+        return "DuneBuggy";
     }
 }

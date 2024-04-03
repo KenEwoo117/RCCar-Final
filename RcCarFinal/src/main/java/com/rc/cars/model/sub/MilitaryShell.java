@@ -1,13 +1,13 @@
-package com.cars.model.sub;
+package com.rc.cars.model.sub;
 
-import com.cars.model.base.AbstractRc;
-import com.cars.model.base.AbstractRcUpgrades;
+import com.rc.cars.model.base.AbstractRCCar;
+import com.rc.cars.model.base.AbstractRCUpgrades;
 
 import java.math.BigDecimal;
 
-public class MilitaryShellUpgrade extends AbstractRcUpgrades {
+public class MilitaryShell extends AbstractRCUpgrades {
 
-    public MilitaryShellUpgrade(AbstractRc car) {
+    public MilitaryShell(AbstractRCCar car) {
         super(car);
     }
 

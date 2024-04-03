@@ -1,6 +1,6 @@
-package com.cars.model.sub;
+package com.rc.cars.model.sub;
 
-import com.cars.model.base.AbstractOffRoad;
+import com.rc.cars.model.base.AbstractOffRoad;
 
 import java.math.BigDecimal;
 

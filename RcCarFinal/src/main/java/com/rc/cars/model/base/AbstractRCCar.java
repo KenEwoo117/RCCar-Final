@@ -1,10 +1,10 @@
-package com.cars.model.base;
+package com.rc.cars.model.base;
 
-import com.cars.model.impl.forSale;
+import com.rc.cars.model.impl.forSale;
 
 import java.math.BigDecimal;
 
-public abstract class AbstractRc implements forSale {
+public abstract class AbstractRCCar implements forSale {
 
 
 private String serialNumber;

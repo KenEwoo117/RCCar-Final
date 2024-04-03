@@ -1,6 +1,6 @@
-package com.cars.model.base;
+package com.rc.cars.model.base;
 
-import com.cars.model.impl.forSale;
+import com.rc.cars.model.impl.forSale;
 
 import java.math.BigDecimal;
 

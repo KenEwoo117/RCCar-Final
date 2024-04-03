@@ -1,18 +1,18 @@
-package com.cars.view;
+package com.rc.cars.view;
 
-import com.cars.model.base.AbstractRc;
-import com.cars.model.base.Accessory;
+import com.rc.cars.model.base.Accessory;
+import com.rc.cars.model.base.AbstractRCCar;
 
 import java.util.ArrayList;
 
 public class Receipt {
-    private ArrayList<AbstractRc> generalCart;
-    private ArrayList<AbstractRc> upgradesCart;
+    private ArrayList<AbstractRCCar> generalCart;
+    private ArrayList<AbstractRCCar> upgradesCart;
     private ArrayList<Accessory> accessoriesCart;
     private double total = 0.0;
 
 
-    public Receipt(ArrayList<AbstractRc> carList,ArrayList<AbstractRc> upgradeList,
+    public Receipt(ArrayList<AbstractRCCar> carList, ArrayList<AbstractRCCar> upgradeList,
                    ArrayList<Accessory> accessoriesList) {
         generalCart = carList;
         upgradesCart = upgradeList;
@@ -38,7 +38,7 @@ public class Receipt {
 
     private void showColumnHeader() {
         String price = String.format("%28s", "Price");
-        System.out.println("Description");
+        System.out.print("Description");
         System.out.println(price);
         showStars();
         showGeneralCart();
@@ -46,13 +46,13 @@ public class Receipt {
 
     private void showGeneralCart(){
         if(!generalCart.isEmpty()) {
-            for(AbstractRc rc : generalCart){
+            for(AbstractRCCar rc : generalCart){
                 System.out.println(rc);
-                System.out.println("  Serial#: " + rc.getSerialNumber());
+                System.out.println("  Serial #: " + rc.getSerialNumber());
                 total += rc.getSaleValue().doubleValue();
                 String rcPrice = String.format("%25s", "$" + rc.getSaleValue());
                 System.out.println("  Rc Price: " + rcPrice);
-                if (upgradesCart.isEmpty()) {
+                if (!upgradesCart.isEmpty()) {
                     showUpgradesCart(rc);
                 }
                 System.out.println();
@@ -61,11 +61,11 @@ public class Receipt {
         showAccessoryCart();
     }
 
-    private void showUpgradesCart(AbstractRc rc){
-        for(AbstractRc upgrades : upgradesCart) {
+    private void showUpgradesCart(AbstractRCCar rc){
+        for(AbstractRCCar upgrades : upgradesCart) {
             if(upgrades.toString().equals(rc.toString())) {
-                String customPrice = String.format("%20s", "$" + upgrades.getOptionalAmount());
-                System.out.println(" " + upgrades.getOptionName());
+                String customPrice = String.format("%15s","$" + upgrades.getOptionalAmount());
+                System.out.print("  " + upgrades.getOptionName());
                 System.out.println(customPrice);
                 total += upgrades.getOptionalAmount().doubleValue();
             }
@@ -76,8 +76,8 @@ public class Receipt {
         if(!accessoriesCart.isEmpty()) {
             System.out.println("Accessoriez");
             for(Accessory item: accessoriesCart) {
-                System.out.println(" " + item.getItemName());
-                String price = String.format("%31s", "$"+ item.getSaleValue());
+                System.out.print("  " +item.getItemName());
+                String price = String.format("%19s", "$"+ item.getSaleValue());
                 System.out.println(price);
                 System.out.println();
                 total += item.getSaleValue().doubleValue();
@@ -86,7 +86,7 @@ public class Receipt {
     }
 
     private void showTotal() {
-        double tax = 3.07;
+        double tax = 1.07;
         double totalWithTax = total * tax;
         double taxAmount = totalWithTax - total;
         showStars();
@@ -110,7 +110,7 @@ public class Receipt {
 
     private void showStars(){
         for(int i = 0; i < 40; i++) {
-            System.out.println("*");
+            System.out.print("*");
         }
         System.out.println();
     }
